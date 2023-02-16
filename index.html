@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="container mx-auto">
+    <h3 class="text-4xl text-center text-sky-600 p-5 font-bold">Money Master💰 </h3>
+
+
+
+    <section class="lg:grid grid-cols-2">
+
+        <div>
+            <img src="images/main image.png" alt="">
+
+
+        </div>
+
+
+        <div class="bg-gray-200 mx-10 p-10">
+
+            <div class="text-center space-y-5">
+
+
+                <p class="text-3xl font-semibold">Income</p>
+                <label for="Income">Income :</label>
+                <input id="Income" type="number" placeholder="Type here" class="input w-full max-w-xs" />
+
+
+
+                <p class="text-3xl font-semibold">Expense</p>
+                <label for="Food">Food :</label>
+                <input id="Food" type="number" placeholder="Type here" class="input w-full max-w-xs" />
+
+               <div>
+                <label for="Rent">Rent :</label>
+                <input id="Rent" type="number" placeholder="Type here" class="input w-full max-w-xs" />
+               </div>
+
+                <div>
+                    <label for="Clothes">Clothes :</label>
+                <input id="Clothes" type="number" placeholder="Type here" class="input w-full max-w-xs" />
+
+
+                </div>
+
+                <button id="btn-calculate" class="btn btn-primary">Calculate</button>
+
+                <p class="font-bold text-xl">Total Expense : <span id="total-expense">00</span></p>
+                <p class="font-bold text-xl">Balance : <span id="balance">00</span></p>
+
+                <div class="flex items-center space-x-6">
+
+                    <div>
+                        <label for="Save">Save :</label>
+                    <input id="Save" type="number" placeholder="" class="input w-24 max-w-xs" />
+                    </div>
+
+                    <p>%</p>
+
+                    <button id="btn-save" class="btn btn-primary">Save</button>
+
+    
+
+
+                </div>
+
+                <p class="font-bold text-xl">Saving Amount : <span id="saving-amount">00</span></p>
+                <p class="font-bold text-xl">Remaining Balance : <span id="remaining-balance">00</span></p>
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+</body>
+
+
+
+<script src="js/index.js"></script>
+
+</html>
