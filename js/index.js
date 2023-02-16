@@ -49,29 +49,43 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
         alert('Please enter all the values!');
 
 
-    } else {
-        const Expense = getText('total-expense');
-        const Balance = getText('balance');
+    }
+
+    else {
+
 
         const TotalExpense = parseInt(Food) + parseInt(Clothes) + parseInt(Rent);
-        const currentBalance = parseInt(Income) - TotalExpense;
 
 
-        if (TotalExpense  > currentBalance) { 
+
+        if (TotalExpense > Income) {
 
 
-            alert ('You have to enough balance to expense')
+            alert('Total expenses exceed the current balance!')
+            return;
         }
+
+
 
         else {
 
+            const currentBalance = parseInt(Income) - TotalExpense;
+
+
+            getText('total-expense');
+            getText('balance');
+
+
             setValue('total-expense', TotalExpense);
             setValue('balance', currentBalance);
+
         }
 
-       
+
+
     }
 
+}
 
 
 
@@ -81,8 +95,7 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
 
 
 
-
-})
+)
 
 
 document.getElementById('btn-save').addEventListener('click', function () {
@@ -91,7 +104,7 @@ document.getElementById('btn-save').addEventListener('click', function () {
     const saveInput = inputValue('Save')
 
 
-    if (saveInput.trim() === '' || saveInput >100) {
+    if (saveInput.trim() === '' || saveInput > 100) {
         alert('Please enter the saving amount less than 100!');
 
     }
@@ -100,16 +113,16 @@ document.getElementById('btn-save').addEventListener('click', function () {
 
 
         const savingAmount = (parseInt(Balance) / 100 * parseInt(saveInput))
-    const remaining = parseInt(Balance) - savingAmount;
+        const remaining = parseInt(Balance) - savingAmount;
 
 
 
-     
+
 
         setValue('saving-amount', savingAmount);
-    setValue('remaining-balance', remaining);
+        setValue('remaining-balance', remaining);
 
-     
+
     }
 
 
